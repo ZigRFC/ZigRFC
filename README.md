@@ -57,7 +57,7 @@ Zig bindings for SAP NW RFC SDK
 TODO...
 
 #### Minimal example
-Assuming all SDK and librayr were added correctly, following example
+Assuming all SDK files and ZigRFC library were added correctly, following example
 ```zig
 const std = @import("std");
 const rfc = @import("rfc");
