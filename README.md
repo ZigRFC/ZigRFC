@@ -1,5 +1,7 @@
 # ZigRFC
-Zig bindings for SAP NW RFC SDK
+Zig bindings for SAP NW RFC SDK.
+
+I more or less tried to make them more Zig idiomatic. You might also import and use C headers, but they are less pleasant to work with and lack documentation (see [/src/root_raw.zig](/src/root_raw.zig)).
 
 ### Requirements
 - You might need to install Visual C++ Redistributable.
