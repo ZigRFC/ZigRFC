@@ -1,5 +1,5 @@
 # ZigRFC
-SAP NW RFC bindings for Zig
+Zig bindings for SAP NW RFC SDK
 
 ### Requirements
 - You might need to install Visual C++ Redistributable.
