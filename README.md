@@ -54,7 +54,9 @@ Zig bindings for SAP NW RFC SDK
    ``` 
 
 ### Usage
-TODO...
+
+#### Client example
+https://github.com/ZigRFC/examples_client 
 
 #### Minimal example
 Assuming all SDK files and ZigRFC library were added correctly, following example
