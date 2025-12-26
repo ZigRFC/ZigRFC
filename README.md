@@ -55,3 +55,29 @@ Zig bindings for SAP NW RFC SDK
 
 ### Usage
 TODO...
+
+#### Minimal example
+Assuming all SDK and librayr were added correctly, following example
+```zig
+const std = @import("std");
+const rfc = @import("rfc");
+
+const W = std.unicode.utf8ToUtf16LeStringLiteral;
+
+pub fn main() !void {
+    var login_params: [6]rfc.connection.Parameter = undefined;
+    var error_info: rfc.ErrorInfo = undefined;
+
+    login_params[0].name = W("ashost");
+    login_params[0].value = W("value");
+
+    const connection = rfc.connection.RfcOpenConnection(&login_params, 1, &error_info);
+    if (connection == null) {
+        try rfc.PrintErrorToLog(&error_info);
+    }
+}
+```
+should produce
+```console
+error: Key=RFC_INVALID_PARAMETER; Message=ASHOST needs SYSNR to be specified
+```
