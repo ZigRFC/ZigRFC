@@ -1,6 +1,6 @@
 .{
     .name = .rfc,
-    .version = "1.0.0",
+    .version = "1.0.1",
     .minimum_zig_version = "0.16.0-dev.1441+2ea55d715",
     .fingerprint = 0x4f2899efccfa8329,
     .paths = .{
