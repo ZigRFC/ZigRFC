@@ -60,6 +60,9 @@ I more or less tried to make them more Zig idiomatic. You might also import and 
 #### Client example
 https://github.com/ZigRFC/examples_client 
 
+#### Server example
+https://github.com/ZigRFC/examples_server
+
 #### Minimal example
 Assuming all SDK files and ZigRFC library were added correctly, following example
 ```zig
