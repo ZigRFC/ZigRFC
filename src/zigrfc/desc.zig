@@ -156,7 +156,7 @@ pub const ParameterDesc = extern struct {
     /// Parameter name, null-terminated string
     name: AbapName = mem.zeroes(AbapName),
     /// Parameter data type
-    type: type = mem.zeroes(type),
+    type: Type = mem.zeroes(Type),
     /// Specifies whether the parameter is an input, output or bi-directional parameter
     direction: Direction = undefined,
     /// Parameter length in bytes in a 1-byte-per-SAP_CHAR system
