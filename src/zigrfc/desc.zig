@@ -145,7 +145,7 @@ pub const FieldDesc = extern struct {
     /// If the field is of type "packed number" (BCD), this member gives the number of decimals.
     decimals: c_uint = 0,
     /// Pointer to an RFC_STRUCTURE_DESC structure for the nested sub-type if the type field is RFCTYPE_STRUCTURE or RFCTYPE_TABLE ////
-    type_desc_handle: *TypeDesc = null,
+    type_desc_handle: ?*TypeDesc = null,
     /// Not used by the NW RFC library. This parameter can be used by applications that want to store additional information in the repository (like F4 help values, e.g.).
     extended_description: ?*anyopaque = null,
 };
@@ -166,7 +166,7 @@ pub const ParameterDesc = extern struct {
     /// Gives the number of decimals in case of a packed number (BCD)
     decimals: c_uint = 0,
     /// Handle to the structure definition in case this parameter is a structure or table
-    type_desc_handle: *TypeDesc = null,
+    type_desc_handle: ?*TypeDesc = null,
     /// Default value as defined in SE37
     default_value: ParameterDefValue = mem.zeroes(ParameterDefValue),
     /// Description text of the parameter as defined in SE37. Null-terminated string.
