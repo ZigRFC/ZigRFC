@@ -7,6 +7,7 @@ pub const authorization = @import("zigrfc/authorization.zig");
 pub const commons = @import("zigrfc/commons.zig");
 pub const connection = @import("zigrfc/connection.zig");
 pub const conversions = @import("zigrfc/conversions.zig");
+pub const data_container = @import("zigrfc/data_container.zig");
 pub const decfloat = @import("zigrfc/decfloat.zig");
 pub const desc = @import("zigrfc/desc.zig");
 pub const ini = @import("zigrfc/ini.zig");
