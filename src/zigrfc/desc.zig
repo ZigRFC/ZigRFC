@@ -101,9 +101,9 @@ pub const Direction = enum(c_int) {
     /// Export parameter. This corresponds to ABAP EXPORTING parameter.
     @"export" = 0x02,
     /// Import and export parameter. This corresponds to ABAP CHANGING parameter.
-    changing = .import | .@"export",
+    changing = 0x03,
     /// Table parameter. This corresponds to ABAP TABLES parameter.
-    tables = 0x04 | .changing,
+    tables = 0x07,
 
     ///   Converts an RFC_DIRECTION direction indicator to a human readable string for logging purposes.
     pub fn GetAsString(self: Direction) [*:0]const SapUc {
@@ -158,7 +158,7 @@ pub const ParameterDesc = extern struct {
     /// Parameter data type
     type: type = mem.zeroes(type),
     /// Specifies whether the parameter is an input, output or bi-directional parameter
-    direction: Direction = mem.zeroes(Direction),
+    direction: Direction = undefined,
     /// Parameter length in bytes in a 1-byte-per-SAP_CHAR system
     nuc_length: c_uint = 0,
     /// Parameter length in bytes in a 2-byte-per-SAP_CHAR system
