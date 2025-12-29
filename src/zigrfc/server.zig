@@ -179,8 +179,8 @@ pub const ServerMonitorData = extern struct {
 // ==================================================
 pub const ServerStateChangeListener = ?*const fn (server_handle: *Server, state_change: *StateChange) callconv(.c) void;
 pub const ServerSessionChangeListener = ?*const fn (server_handle: *Server, session_change: *SessionChange) callconv(.c) ReturnCode;
-pub const ServerErrorListener = ?*const fn (server_handle: *Server, client_info: *Attributes, error_info: ?*ErrorInfo) callconv(.c) void;
-pub const ServerFunction = ?*const fn (rfc_handle: *Connection, func_handle: *Function, error_info: ?*ErrorInfo) callconv(.c) ReturnCode;
+pub const ServerErrorListener = ?*const fn (server_handle: *Server, client_info: *Attributes, error_info: *ErrorInfo) callconv(.c) void;
+pub const ServerFunction = ?*const fn (rfc_handle: *Connection, func_handle: *Function, error_info: *ErrorInfo) callconv(.c) ReturnCode;
 pub const FuncDescCallback = ?*const fn (function_name: [*:0]const SapUc, rfc_attributes: Attributes, func_desc_handle: *FunctionDesc) callconv(.c) ReturnCode;
 
 // ==================================================
